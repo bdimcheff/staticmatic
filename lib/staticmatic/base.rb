@@ -63,7 +63,7 @@ module StaticMatic
       
     # TODO: DRY this _exists? section up
     def template_exists?(name, dir = '')
-      File.exists?(File.join(@src_dir, 'pages', dir, "#{name}.haml")) || File.exists?(File.join(@src_dir, 'stylesheets', "#{name}.sass"))
+      File.exists?(File.join(@src_dir, 'pages', dir, "#{name}.haml")) || File.exists?(File.join(@src_dir, 'stylesheets', dir, "#{name}.sass"))
     end
     
     def layout_exists?(name)
